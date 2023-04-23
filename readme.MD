@@ -35,7 +35,7 @@
 * **EP2.2: Incluyendo interacción en el front-end haciendo uso de TS o JS usando la librería JQuery.**
     * Cumple, Se utiliza JQuery en tarea-generator.js
     <p align="center">
-    <img src="img/EP2/JQuery.png">
+    <img src="img/EP2/jquery.png">
     </p>
     <br/>
 + **EP2.3: Validación de los formularios haciendo uso de JS.**
