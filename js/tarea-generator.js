@@ -36,7 +36,6 @@ function createTarea(title, daysSince, contents, startDate, endDate) {
 
 jQuery(function () {
     let $tareaContainer = $("#tareas");
-    console.log($tareaContainer);
 
     if ($tareaContainer) {
         let tareaCount = randomInRange(5, 10);

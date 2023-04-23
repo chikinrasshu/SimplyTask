@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Do Form Validations
     const forms = document.querySelectorAll('.needs-validation');
-    console.log(forms);
 
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
