@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="red">
+    <title>Notificaciones</title>
+
+    <!-- chk -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="d-flex flex-column">
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cerrar Sesi&oacute;n</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Desea cerrar sesi&oacute;n?</p>
+
+                    <div class="col-12">
+                        <div class="form-check text-start">
+                            <input class="form-check-input" type="checkbox" id="logoutNeverShowAgain">
+                            <label class="form-check-label" for="logoutNeverShowAgain">
+                                No volver a mostrar.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-secondary" href="/index.html">S&iacute;</a>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No, volver
+                        atr&aacute;s</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <header class="sticky-top mb-3 shadow">
+        <nav class="navbar navbar-expand-md justify-content-center bg-primary">
+            <div class="container">
+                <!-- Logo and Toggler -->
+                <a class="navbar-brand d-flex w-50 me-auto" href="/index.html">
+                    <img src="img/logo.svg" alt="SimplyTask" height="36">
+                    &nbsp;SimplyTask
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- End of Logo and Toggler -->
+
+                <div class="navbar-collapse collapse w-100" id="navbarSupportedContent">
+                    <!-- Center Menu -->
+                    <ul class="navbar-nav w-100 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarTareas.html">Tareas</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="mostrarProgreso.html">Progreso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarHorario.html">Horario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarNotificaciones.html">Notificaciones</a>
+                        </li>
+                    </ul>
+                    <!-- End of Center Menu -->
+
+                    <!-- User Menu -->
+                    <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img class="rounded-pill overflow-hidden" src="img/user_placeholder.svg" height="36">
+                                {Username}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+                                <li><a class="dropdown-item" href="ajustes.html">Ajustes</a></li>
+                                <li><a class="dropdown-item" href="ayuda.html">Ayuda</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="" data-bs-toggle="modal"
+                                        data-bs-target="#logoutModal">Cerrar
+                                        Sesion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- End of User Menu -->
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- End of Nav Bar -->
+
+    <main id="page-content" class="container text-center">
+
+        <!-- Navigation -->
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0">Notificaciones</h3>
+                            <hr class="mb-md-5">
+
+                            <div class="card shadow mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between border-bottom mb-3">
+                                        <h5 class="card-title">Titulo de la Notificaci&oacute;n</h5>
+                                        <button type="button" class="btn-close" aria-label="Close"></button>
+                                    </div>
+
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">Descripci&oacute;n corta</h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Exercitationem error voluptas
+                                        repellat consequatur, nam natus, soluta cum, et repellendus nisi perferendis
+                                        debitis voluptatum
+                                        sint accusamus obcaecati iure. Maxime, voluptatibus voluptatem? (*´ω｀)</p>
+                                    <a href="#" class="card-link">Link Simple</a>
+                                    <a href="#" class="card-link">Otro Link</a>
+                                    <a href="#" class="card-link">Tercer link?</a>
+                                </div>
+                            </div>
+
+                            <div class="card shadow mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between border-bottom mb-3">
+                                        <h5 class="card-title">Titulo de la Notificaci&oacute;n</h5>
+                                        <button type="button" class="btn-close" aria-label="Close"></button>
+                                    </div>
+
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">Descripci&oacute;n corta</h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Exercitationem error voluptas
+                                        repellat consequatur, nam natus, soluta cum, et repellendus nisi perferendis
+                                        debitis voluptatum
+                                        sint accusamus obcaecati iure. Maxime, voluptatibus voluptatem? (*´ω｀)</p>
+                                    <a href="#" class="card-link">Link Simple</a>
+                                    <a href="#" class="card-link">Otro Link</a>
+                                    <a href="#" class="card-link">Tercer link?</a>
+                                </div>
+                            </div>
+
+                            <div class="card shadow mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between border-bottom mb-3">
+                                        <h5 class="card-title">Titulo de la Notificaci&oacute;n</h5>
+                                        <button type="button" class="btn-close" aria-label="Close"></button>
+                                    </div>
+
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">Descripci&oacute;n corta</h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Exercitationem error voluptas
+                                        repellat consequatur, nam natus, soluta cum, et repellendus nisi perferendis
+                                        debitis voluptatum
+                                        sint accusamus obcaecati iure. Maxime, voluptatibus voluptatem? (*´ω｀)</p>
+                                    <a href="#" class="card-link">Link Simple</a>
+                                    <a href="#" class="card-link">Otro Link</a>
+                                    <a href="#" class="card-link">Tercer link?</a>
+                                </div>
+                            </div>
+
+                            <div class="card shadow mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between border-bottom mb-3">
+                                        <h5 class="card-title">Titulo de la Notificaci&oacute;n</h5>
+                                        <button type="button" class="btn-close" aria-label="Close"></button>
+                                    </div>
+
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">Descripci&oacute;n corta</h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Exercitationem error voluptas
+                                        repellat consequatur, nam natus, soluta cum, et repellendus nisi perferendis
+                                        debitis voluptatum
+                                        sint accusamus obcaecati iure. Maxime, voluptatibus voluptatem? (*´ω｀)</p>
+                                    <a href="#" class="card-link">Link Simple</a>
+                                    <a href="#" class="card-link">Otro Link</a>
+                                    <a href="#" class="card-link">Tercer link?</a>
+                                </div>
+                            </div>
+
+                            <div class="card shadow mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between border-bottom mb-3">
+                                        <h5 class="card-title">Titulo de la Notificaci&oacute;n</h5>
+                                        <button type="button" class="btn-close" aria-label="Close"></button>
+                                    </div>
+
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">Descripci&oacute;n corta</h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Exercitationem error voluptas
+                                        repellat consequatur, nam natus, soluta cum, et repellendus nisi perferendis
+                                        debitis voluptatum
+                                        sint accusamus obcaecati iure. Maxime, voluptatibus voluptatem? (*´ω｀)</p>
+                                    <a href="#" class="card-link">Link Simple</a>
+                                    <a href="#" class="card-link">Otro Link</a>
+                                    <a href="#" class="card-link">Tercer link?</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Generic Form -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="sticky-footer" class="footer bg-body-tertiary" shadow-sm">
+        <div class="container text-center">
+            </small>Copyright &copy; chk 2023. All rights reserved.</small>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+
+</html>

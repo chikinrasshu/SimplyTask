@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="red">
+    <title>Editar Perfil</title>
+
+    <!-- chk -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="d-flex flex-column">
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cerrar Sesi&oacute;n</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Desea cerrar sesi&oacute;n?</p>
+
+                    <div class="col-12">
+                        <div class="form-check text-start">
+                            <input class="form-check-input" type="checkbox" id="logoutNeverShowAgain">
+                            <label class="form-check-label" for="logoutNeverShowAgain">
+                                No volver a mostrar.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-secondary" href="/index.html">S&iacute;</a>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No, volver
+                        atr&aacute;s</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <header class="sticky-top mb-3 shadow">
+        <nav class="navbar navbar-expand-md justify-content-center bg-primary">
+            <div class="container">
+                <!-- Logo and Toggler -->
+                <a class="navbar-brand d-flex w-50 me-auto" href="/index.html">
+                    <img src="img/logo.svg" alt="SimplyTask" height="36">
+                    &nbsp;SimplyTask
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- End of Logo and Toggler -->
+
+                <div class="navbar-collapse collapse w-100" id="navbarSupportedContent">
+                    <!-- Center Menu -->
+                    <ul class="navbar-nav w-100 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarTareas.html">Tareas</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="mostrarProgreso.html">Progreso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarHorario.html">Horario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarNotificaciones.html">Notificaciones</a>
+                        </li>
+                    </ul>
+                    <!-- End of Center Menu -->
+
+                    <!-- User Menu -->
+                    <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img class="rounded-pill overflow-hidden" src="img/user_placeholder.svg" height="36">
+                                {Username}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+                                <li><a class="dropdown-item" href="ajustes.html">Ajustes</a></li>
+                                <li><a class="dropdown-item" href="ayuda.html">Ayuda</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="" data-bs-toggle="modal"
+                                        data-bs-target="#logoutModal">Cerrar
+                                        Sesion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- End of User Menu -->
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- End of Nav Bar -->
+
+    <main id="page-content" class="container text-center">
+
+        <!-- Navigation -->
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0">Editar Perfil</h3>
+                            <hr class="mb-md-5">
+
+                            <!-- Select User Photo -->
+                            <div class="card shadow rounded-pill overflow-hidden w-50 mx-auto mb-5">
+                                <img src="img/user_placeholder.svg" />
+                            </div>
+
+                            <div class="input-group mb-4">
+                                <label class="input-group-text" for="inputGroupFile01">Cambiar Foto de Perfil</label>
+                                <input type="file" class="form-control" id="inputGroupFile01">
+                            </div>
+
+                            <hr>
+                            <!-- End of Select User Photo -->
+
+                            <div class="input-group flex-nowrap mb-1">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="bi bi-person"></i>
+                                </span>
+                                <span class="input-group-text">Nombre de Usuario</span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                    aria-describedby="addon-wrapping">
+                            </div>
+
+                            <div class="input-group flex-nowrap mb-1">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="bi bi-envelope-at"></i>
+                                </span>
+                                <span class="input-group-text">Correo Electr&oacute;nico</span>
+                                <input type="email" class="form-control" placeholder="E-Mail" aria-label="E-Mail"
+                                    aria-describedby="addon-wrapping">
+                            </div>
+
+                            <div class="input-group flex-nowrap mb-1">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="bi bi-calendar3"></i>
+                                </span>
+                                <span class="input-group-text">Fecha de Nacimiento</span>
+                                <input id="birthday" class="form-control" type="date" aria-label="Birthday"
+                                    aria-describedby="addon-wrapping" />
+                            </div>
+
+                            <hr>
+
+                            <div class="mb-1">
+                                <label for="exampleFormControlTextarea1" class="form-label">Descripci&oacute;n</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+
+                            <hr>
+
+                            <div class="col-12">
+                                <div class="form-check text-start">
+                                    <input class="form-check-input" type="checkbox" id="notifCheck">
+                                    <label class="form-check-label" for="notifCheck">
+                                        Recibir Notificaciones
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check text-start">
+                                    <input class="form-check-input" type="checkbox" id="promoCheck">
+                                    <label class="form-check-label" for="promoCheck">
+                                        Recibir Correos Promocionales
+                                    </label>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="col-12 mt-5">
+                                <button type="submit" class="btn btn-success w-100">Guardar Cambios</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Generic Form -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="sticky-footer" class="footer bg-body-tertiary" shadow-sm">
+        <div class="container text-center">
+            </small>Copyright &copy; chk 2023. All rights reserved.</small>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+
+<!-- Add Form 
+<form class="center" novalidate>
+    <h2>Editar Perfil</h2>
+    <div class="shadow"></div>
+
+    <div class="window">
+        <div class="item">
+            <img class="center user-profile" src="img/user_placeholder.svg" />
+        </div>
+        <br>
+        <div class="item">
+            <button><a href="#">Editar Imagen de Perfil</a></button>
+        </div>
+    </div>
+    <br>
+
+    <div class="item">
+        <input type="text" id="user" required="required">
+        <label for="user">Nombre</label>
+    </div>
+
+    <div class="item">
+        <input type="text" id="email" required="required">
+        <label for="user">Email</label>
+    </div>
+
+    <span>Fecha de Nacimiento</span>
+    <div class="group group-3">
+        <div class="item">
+            <input type="text" id="date-day1" required="required">
+            <label for="date-day1">Dia</label>
+        </div>
+
+        <div class="item">
+            <input type="text" id="date-month1" required="required">
+            <label for="date-month1">Mes</label>
+        </div>
+
+        <div class="item">
+            <input type="text" id="date-year1" required="required">
+            <label for="date-year1">A&ntilde;o</label>
+        </div>
+    </div>
+
+    <div class="item">
+        <textarea id="desc" name="desc" rows="5" required="required"></textarea>
+        <label for="desc">Descripci&oacute;n / Bio</label>
+    </div>
+
+    <div class="item">
+        <label class="checkbox-item">
+            <input type="checkbox" id="notify-before" checked="checked">
+            <span>Recibir Notificaciones</span>
+        </label>
+    </div>
+    <div class="item">
+        <label class="checkbox-item">
+            <input type="checkbox" id="is-important" checked="checked">
+            <span>Recibir Correos</span>
+        </label>
+    </div>
+
+    <button type="submit">Guardar Cambios</button>
+</form>
+-->
+
+</html>
