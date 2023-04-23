@@ -4,6 +4,7 @@
 
 $enable-shadows: true;
 $enable-gradients: true;
+$enable-dark-mode: true;
 
 $custom-colors: (
     "primary": #618dbd,
@@ -15,6 +16,7 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 // Custom sticky footer
 @import "sticky-footer";
