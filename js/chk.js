@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
-            console.log("Checking validity");
             if (!form.checkValidity()) {
-                console.log("Is valid?");
                 event.preventDefault();
                 event.stopPropagation();
             }
