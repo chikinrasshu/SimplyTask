@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -7,124 +7,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="red">
     <title>Agregar Item</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/form.css">
-    <script type="text/javascript" src="js/chk.js" defer></script>
+
+    <!-- chk -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body><!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cerrar Sesi&oacute;n</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Desea cerrar sesi&oacute;n?</p>
+
+                    <div class="col-12">
+                        <div class="form-check text-start">
+                            <input class="form-check-input" type="checkbox" id="logoutNeverShowAgain">
+                            <label class="form-check-label" for="logoutNeverShowAgain">
+                                No volver a mostrar.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-secondary" href="/index.html">S&iacute;</a>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No, volver
+                        atr&aacute;s</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Nav Bar -->
-    <header>
-        <nav>
-            <ul>
-                <!-- Logo -->
-                <li class="logo">
-                    <a href="index.html"><img src="img/logo.svg" />SimplyTask!</a>
-                </li>
-                <!-- End of Logo -->
+    <header class="sticky-top mb-3 shadow">
+        <nav class="navbar navbar-expand-md justify-content-center bg-primary">
+            <div class="container">
+                <!-- Logo and Toggler -->
+                <a class="navbar-brand d-flex w-50 me-auto" href="/index.html">
+                    <img src="img/logo.svg" alt="SimplyTask" height="36">
+                    &nbsp;SimplyTask
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- End of Logo and Toggler -->
 
-                <!-- Menu -->
-                <li class="menu">
-                    <ul>
-                        <li><a href="mostrarTareas.html">Tareas</a></li>
-                        <li><a href="mostrarProgreso.html">Progreso</a></li>
-                        <li><a href="mostrarHorario.html">Horario</a></li>
-                        <li><a href="mostrarNotificaciones.html">Notificaciones</a></li>
+                <div class="navbar-collapse collapse w-100" id="navbarSupportedContent">
+                    <!-- Center Menu -->
+                    <ul class="navbar-nav w-100 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarTareas.html">Tareas</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="mostrarProgreso.html">Progreso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarHorario.html">Horario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mostrarNotificaciones.html">Notificaciones</a>
+                        </li>
                     </ul>
-                </li>
-                <!-- End of Menu -->
+                    <!-- End of Center Menu -->
 
-                <!-- User Menu -->
-                <li class="user-menu">
-                    <button>Username <img src="img/user_placeholder.svg" /></button>
-                    <ul>
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="ajustes.html">Ajustes</a></li>
-                        <li><a href="ayuda.html">Ayuda</a></li>
-                        <li><a href="logout.html">Cerrar Sesion</a></li>
+                    <!-- User Menu -->
+                    <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img class="rounded-pill overflow-hidden" src="img/user_placeholder.svg" height="36">
+                                {Username}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+                                <li><a class="dropdown-item" href="ajustes.html">Ajustes</a></li>
+                                <li><a class="dropdown-item" href="ayuda.html">Ayuda</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="" data-bs-toggle="modal"
+                                        data-bs-target="#logoutModal">Cerrar
+                                        Sesion</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <!-- End of User Menu -->
-            </ul>
+                    <!-- End of User Menu -->
+                </div>
+
+            </div>
         </nav>
     </header>
     <!-- End of Nav Bar -->
 
     <main>
-        <!-- Add Form -->
-        <form class="center" novalidate>
-            <h2>Agregar Item</h2>
-            <div class="shadow"></div>
+        <!-- Navigation -->
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 text-center">Agregar Item</h3>
+                            <hr class="mb-md-5">
 
-            <div class="item">
-                <input type="text" id="user" required="required">
-                <label for="user">Nombre</label>
-            </div>
+                            <div class="input-group flex-nowrap mb-1">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="bi bi-list-task"></i>
+                                </span>
+                                <span class="input-group-text">Nombre</span>
+                                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"
+                                    aria-describedby="addon-wrapping">
+                            </div>
 
-            <span>Fecha de Inicio</span>
-            <div class="group group-3">
-                <div class="item">
-                    <input type="text" id="date-day1" required="required">
-                    <label for="date-day1">Dia</label>
+                            <div class="input-group flex-nowrap mb-1">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="bi bi-calendar3"></i>
+                                </span>
+                                <span class="input-group-text">Fecha de Inicio</span>
+                                <input id="startDate" class="form-control" type="date" aria-label="Start Date"
+                                    aria-describedby="addon-wrapping" />
+                            </div>
+
+                            <div class="input-group flex-nowrap mb-1">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="bi bi-calendar3"></i>
+                                </span>
+                                <span class="input-group-text">Fecha de Termino</span>
+                                <input id="endDate" class="form-control" type="date" aria-label="End Date"
+                                    aria-describedby="addon-wrapping" />
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="descriptionArea" class="form-label">Descripci&oacute;n</label>
+                                <textarea class="form-control" id="descriptionArea" rows="3"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check text-start">
+                                    <input class="form-check-input" type="checkbox" id="notifCheck">
+                                    <label class="form-check-label" for="notifCheck">
+                                        Notificarme un d&iacute;a antes.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check text-start">
+                                    <input class="form-check-input" type="checkbox" id="importantCheck">
+                                    <label class="form-check-label" for="importantCheck">
+                                        Es importante.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="col-12 mt-5">
+                                <button type="submit" class="btn btn-success w-100">Guardar Item</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
-                <div class="item">
-                    <input type="text" id="date-month1" required="required">
-                    <label for="date-month1">Mes</label>
-                </div>
-
-                <div class="item">
-                    <input type="text" id="date-year1" required="required">
-                    <label for="date-year1">A&ntilde;o</label>
-                </div>
             </div>
-
-            <span>Fecha de Termino</span>
-            <div class="group group-3">
-                <div class="item">
-                    <input type="text" id="date-day2" required="required">
-                    <label for="date-day2">Dia</label>
-                </div>
-
-                <div class="item">
-                    <input type="text" id="date-month2" required="required">
-                    <label for="date-month2">Mes</label>
-                </div>
-
-                <div class="item">
-                    <input type="text" id="date-year2" required="required">
-                    <label for="date-year2">A&ntilde;o</label>
-                </div>
-            </div>
-
-            <div class="item">
-                <textarea id="desc" name="desc" rows="5" required="required"></textarea>
-                <label for="desc">Descripci&oacute;n</label>
-            </div>
-
-            <div class="item">
-                <label class="checkbox-item">
-                    <input type="checkbox" id="notify-before" checked="checked">
-                    <span>Notificame un dia antes</span>
-                </label>
-            </div>
-            <div class="item">
-                <label class="checkbox-item">
-                    <input type="checkbox" id="is-important" checked="checked">
-                    <span>Es Importante</span>
-                </label>
-            </div>
-
-            <button type="submit">Agregar</button>
-        </form>
-        <!-- End of Add Form -->
+        </div>
+        <!-- End of Navigation -->
     </main>
 
     <!-- Footer -->
-    <footer>
-        &copy; chk 2023. All rights reserved.
+    <footer id="sticky-footer" class="footer bg-body-tertiary mt-5 shadow-sm">
+        <div class="container text-center">
+            </small>Copyright &copy; chk 2023. All rights reserved.</small>
+        </div>
     </footer>
     <!-- End of Footer -->
 </body>
 
 </html>
+
+<!--
+<form class="center" novalidate>
+    <h2>Agregar Item</h2>
+    <div class="shadow"></div>
+
+    <div class="item">
+        <input type="text" id="user" required="required">
+        <label for="user">Nombre</label>
+    </div>
+
+    <span>Fecha de Inicio</span>
+    <div class="group group-3">
+        <div class="item">
+            <input type="text" id="date-day1" required="required">
+            <label for="date-day1">Dia</label>
+        </div>
+
+        <div class="item">
+            <input type="text" id="date-month1" required="required">
+            <label for="date-month1">Mes</label>
+        </div>
+
+        <div class="item">
+            <input type="text" id="date-year1" required="required">
+            <label for="date-year1">A&ntilde;o</label>
+        </div>
+    </div>
+
+    <span>Fecha de Termino</span>
+    <div class="group group-3">
+        <div class="item">
+            <input type="text" id="date-day2" required="required">
+            <label for="date-day2">Dia</label>
+        </div>
+
+        <div class="item">
+            <input type="text" id="date-month2" required="required">
+            <label for="date-month2">Mes</label>
+        </div>
+
+        <div class="item">
+            <input type="text" id="date-year2" required="required">
+            <label for="date-year2">A&ntilde;o</label>
+        </div>
+    </div>
+
+    <div class="item">
+        <textarea id="desc" name="desc" rows="5" required="required"></textarea>
+        <label for="desc">Descripci&oacute;n</label>
+    </div>
+
+    <div class="item">
+        <label class="checkbox-item">
+            <input type="checkbox" id="notify-before" checked="checked">
+            <span>Notificame un dia antes</span>
+        </label>
+    </div>
+    <div class="item">
+        <label class="checkbox-item">
+            <input type="checkbox" id="is-important" checked="checked">
+            <span>Es Importante</span>
+        </label>
+    </div>
+
+    <button type="submit">Agregar</button>
+</form>
+-->
